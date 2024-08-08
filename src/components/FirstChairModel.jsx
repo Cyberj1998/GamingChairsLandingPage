@@ -8,6 +8,7 @@ Title: Free Desk or Gamer Chair
 
 import React, { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useFrame, useThree } from '@react-three/fiber'
 import { a } from '@react-spring/three'
 import chairScene from './assets/free_desk_or_gamer_chair/scene.gltf'
@@ -23,8 +24,8 @@ const FirstChairModel = (props) => {
     }
   })
 
-
-  const { nodes, materials } = useGLTF(chairScene)
+  const gltfLoader = new GLTFLoader()
+  const { nodes, materials } = useGLTF(chairScene, gltfLoader)
   return (
     <a.group ref={chairRef} {...props}>
       <group scale={0.238}>
