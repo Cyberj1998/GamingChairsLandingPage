@@ -29,7 +29,6 @@ function App() {
               <Divider />
               <FirstShoppingSection dark={dark} chairsData={chairsData} setChairsData={setChairsData} />
               <SecondDivider />
-              <SecondShoppingSection chairsData={chairsData} setChairsData={setChairsData} />
               <Tutorial dark={dark} setDark={setDark} />      
               <Footer />
             </>
