@@ -9,8 +9,10 @@ Title: Gaming Chair
 import React, { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { a } from '@react-spring/three'
 import chairScene from './assets/gaming_chair/scene.gltf'
+
 
 const SecondCHairModel = (props) => {
 
@@ -23,8 +25,9 @@ const SecondCHairModel = (props) => {
     }
   })
 
-
-  const { nodes, materials } = useGLTF(chairScene)
+  const gltfLoader = new GLTFLoader()
+  gltfLoader.setPath('./assets/gaming_chair/scene.bin')
+  const { nodes, materials } = useGLTF(chairScene, gltfLoader)
   return (
     <a.group {...props} ref={chairRef}>
       <group position={[0, 0.526, 0.045]} scale={[0.154, 0.202, 0.255]}>

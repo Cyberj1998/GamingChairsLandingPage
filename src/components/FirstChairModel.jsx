@@ -13,7 +13,6 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { a } from '@react-spring/three'
 import chairScene from './assets/free_desk_or_gamer_chair/scene.gltf'
 
-
 const FirstChairModel = (props) => {
   const chairRef = useRef()
   
@@ -25,6 +24,7 @@ const FirstChairModel = (props) => {
   })
 
   const gltfLoader = new GLTFLoader()
+  gltfLoader.setPath('./assets/free_desk_or_gamer_chair/scene.bin')
   const { nodes, materials } = useGLTF(chairScene, gltfLoader)
   return (
     <a.group ref={chairRef} {...props}>
