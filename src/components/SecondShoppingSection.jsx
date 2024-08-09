@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import SecondChairModel from './SecondChairModel'
+import FirstChairModel from './FirstChairModel'
 
 const SecondShoppingSection = ({chairsData}) => {
   
@@ -45,7 +45,7 @@ const SecondShoppingSection = ({chairsData}) => {
               <Suspense>
                 <directionalLight position={[1, 1, 5]} intensity={3} />
                 <ambientLight intensity={0.1} />
-                <SecondChairModel
+                <FirstChairModel
                   position={chairModelPosition}
                   scale={chairModelScale}
                   rotation={chairModelrotation}
