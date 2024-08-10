@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer id="footer" className="h-[200px] w-full bg-[#121212] flex justify-center items-start md:flex-row flex-col mt-[50px]">
             <div id="left_footer" className="md:h-[100%] h-[50%] md:w-[50%] w-full">
-                <p id="slogan" className="ml-[10px] font-sans font-semibold md:text-[12px] text-[10px] w-[200px] text-[#898989]">Elevate your Gaming experience with us right now</p>
+                <p id="slogan" className="ml-[10px] font-sans font-semibold md:text-[12px] text-[10px] w-[200px] text-[#898989]">Elevate your Haming experience with us right now</p>
                 <div id="socials_container" className="md:h-[50px] h-[20px] w-[150px] flex justify-evenly items-center flex-row">
                     <img id="instagram" className="md:h-[20px] h-[15px] md:w-[30]px w-[15px]" src={instagram} />
                     <img id="telegram" className="md:h-[20px] h-[15px] md:w-[30]px w-[15px]" src={twitter} />
